@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 5vh 7vh 0 7vh;
+    gap: 45vh;
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            li {
+                font-size: 16px;
+              
+                
+                a {
+                    text-decoration: none;
+                    color: #161616;
+                    
+                    &:hover {
+                       color: #015DFF;
+                    }
+                }
+
+                button {
+                    border-radius: 50px;
+                    padding: 16px 40px;
+                    background-color: #161616;
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+main {
+    #upBanner {
+        background-image: url('/src/images/upbanner/bg.jpg');
+        width: 100%;
+        height: 70vh;
+
+        #upBannerHeader {
+            text-align: center;
+
+            span {
+                background: #E6EFFF;
+                color:#015DFF;
+                padding: 6px 12px;
+                border-radius: 8px;
+            }
+
+        }
+
+        #upBannerLinks {
+
+            a {
+                border-radius: 50px;
+                padding: 16px 40px;
+                background-color: #FFCC7E;
+                color: white;
+                border: none;
+                text-decoration: none;
+                color: #161616;
+            }
+        }
+    }
+}
