@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hivency</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
     <header>
-        <img src="./src/images/header/logo.png" alt="Logo">
+        <a href="index.html">
+            <img src="./src/images/header/logo.png" alt="Logo">
+        </a>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -17,20 +20,29 @@
                 <li><a href="#">Pages</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><button type="button">Get in touch</button></li>
+                <li><button class="button-effect">
+                        <span class="button-effect-inner">
+                            <span class="button-effect-text" data-effect="Get in touch">Get in touch</span>
+                        </span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="upBanner">
             <div id="upBannerMain">
-                <div id="upBannerHeader">
+                <div class="spanHeader upBannerHeader">
                     <span>Creative agency</span>
                     <h1>Branding for your growth goals and creative ideas</h1>
                     <p>Nemo enim ipsam voluptatem quia voluptas sit asper natur aut oditut fugit seduia conse.</p>
                 </div>
                 <div id="upBannerLinks">
-                    <a href="#">Learn More</a>
+                    <a href="#" class="button-effect a-effect">
+                        <span class="button-effect-inner">
+                            <span class="button-effect-text" data-effect="Learn More">Learn More</span>
+                        </span>
+                    </a>
                     <a href="#">Watch Video</a>
                 </div>
                 <div id="upBannerStats">
@@ -41,24 +53,26 @@
             </div>
             <img src="./src/images/upbanner/hero-1.png" alt="Woman Picture">
         </section>
-        <section id="">
-            <span>Our services</span>
-            <h1>Unleashing the best website tailored for you</h1>
-            <div>
-                <div>
+        <section id="ourServices">
+            <div class="spanHeader ourServicesHeader">
+                <span>Our services</span>
+                <h1>Unleashing the best website tailored for you</h1>                
+            </div>
+            <div id="ourServicesCards">
+                <div class="ourServicesCard">
                     <img src="" alt="">
-                    <h2></h2>
-                    <p></p>
+                    <h2>User experience</h2>
+                    <p>Nemo enim ipsam voluptatem quiamet voluptas asper natur oditut</p>
                 </div>
-                <div>
+                <div class="ourServicesCard">
                     <img src="" alt="">
-                    <h2></h2>
-                    <p></p>
+                    <h2>Digital strategy</h2>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
                 </div>
-                <div>
+                <div class="ourServicesCard">
                     <img src="" alt="">
-                    <h2></h2>
-                    <p></p>
+                    <h2>Web design</h2>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis</p>
                 </div>
             </div>
         </section>
