@@ -1,29 +1,5 @@
 main {
 
-    .spanHeader {
-
-        span {
-            background: #E6EFFF;
-            color: #015DFF;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 20px;
-        }
-
-        h1 {
-            font-size: 55px;
-            width: 70vh;
-        }
-
-        p {
-            margin-top: 3vh;
-            margin-bottom: 7vh;
-            width: 60vh;
-            font-size: 18px;
-        }
-
-    }
-
     #upBanner {
         background-image: url('/src/images/upbanner/bg.jpg');
         width: 100%;
@@ -47,6 +23,15 @@ main {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1vh;
+
+                h1 {
+                    width: 70vh;
+                    font-size: 55px;
+                }
+
+                p {
+                    width: 60vh;
+                }
             }
 
             #upBannerLinks {
@@ -54,29 +39,36 @@ main {
                 gap: 1vh;
             }
 
-            #upBannerStats {}
+            #upBannerStats {
+                position: absolute;
+                right: 0;
+            }
 
             img {
                 height: 40vh;
             }
         }
 
-        #ourServices {
+    }
+
+    #ourServices {
+
+        .ourServicesHeader {
             text-align: center;
 
-            .ourServicesHeader {
-                display: flex;
+            h1 {
+                font-size: 40px;
             }
+        }
 
-            #ourServicesCards {
+        #ourServicesCards {
+            display: flex;
+
+            .ourServicesCard {
                 display: flex;
-
-                .ourServicesCard {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                }
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
         }
     }

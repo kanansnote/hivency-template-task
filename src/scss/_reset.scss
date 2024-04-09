@@ -64,5 +64,26 @@
     transform: translateY(-50%);
 }
 
-
 /* Other Things */
+
+.sectionHeader {
+
+    span {
+        background: #E6EFFF;
+        color: #015DFF;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    p {
+        margin-top: 3vh;
+        margin-bottom: 7vh;
+        font-size: 18px;
+    }
+
+}

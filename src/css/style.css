@@ -63,6 +63,22 @@
 }
 
 /* Other Things */
+.sectionHeader span {
+  background: #E6EFFF;
+  color: #015DFF;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.sectionHeader h1 {
+  font-size: 55px;
+}
+.sectionHeader p {
+  margin-top: 3vh;
+  margin-bottom: 7vh;
+  font-size: 18px;
+}
+
 header {
   display: flex;
   justify-content: space-around;
@@ -87,23 +103,6 @@ header nav ul li a:hover {
   color: #015DFF;
 }
 
-main .spanHeader span {
-  background: #E6EFFF;
-  color: #015DFF;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 20px;
-}
-main .spanHeader h1 {
-  font-size: 55px;
-  width: 70vh;
-}
-main .spanHeader p {
-  margin-top: 3vh;
-  margin-bottom: 7vh;
-  width: 60vh;
-  font-size: 18px;
-}
 main #upBanner {
   background-image: url("/src/images/upbanner/bg.jpg");
   width: 100%;
@@ -127,23 +126,34 @@ main #upBanner #upBannerMain .upBannerHeader {
   align-items: flex-start;
   gap: 1vh;
 }
+main #upBanner #upBannerMain .upBannerHeader h1 {
+  width: 70vh;
+  font-size: 55px;
+}
+main #upBanner #upBannerMain .upBannerHeader p {
+  width: 60vh;
+}
 main #upBanner #upBannerMain #upBannerLinks {
   display: flex;
   gap: 1vh;
 }
+main #upBanner #upBannerMain #upBannerStats {
+  position: absolute;
+  right: 0;
+}
 main #upBanner #upBannerMain img {
   height: 40vh;
 }
-main #upBanner #ourServices {
+main #ourServices .ourServicesHeader {
   text-align: center;
 }
-main #upBanner #ourServices .ourServicesHeader {
+main #ourServices .ourServicesHeader h1 {
+  font-size: 40px;
+}
+main #ourServices #ourServicesCards {
   display: flex;
 }
-main #upBanner #ourServices #ourServicesCards {
-  display: flex;
-}
-main #upBanner #ourServices #ourServicesCards .ourServicesCard {
+main #ourServices #ourServicesCards .ourServicesCard {
   display: flex;
   justify-content: center;
   align-items: center;
