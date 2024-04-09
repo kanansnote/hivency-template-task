@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vh 7vh;
+    gap: 30vh;
+
+    nav {
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 5vh;
+
+            li {
+                font-size: 18px;
+
+
+                a {
+                    text-decoration: none;
+                    color: #161616;
+
+
+                    &:hover {
+                        color: #015DFF;
+                    }
+                }
+            }
+        }
+    }
+
+}

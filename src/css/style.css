@@ -1,181 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
 
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5vh 7vh;
-    gap: 30vh;
-
-    nav {
-
-        ul {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 5vh;
-
-            li {
-                font-size: 18px;
-
-
-                a {
-                    text-decoration: none;
-                    color: #161616;
-
-
-                    &:hover {
-                        color: #015DFF;
-                    }
-                }
-            }
-        }
-    }
-
-}
-
+/* Button Effects */
 .button-effect {
-    width: auto;
-    border: none;
-    outline: none;
-    background-color: #161616;
-    padding: 16px 40px;
-    border-radius: 50px;
-    font-size: 18px;
-    color: #fff;
-    transition: 0.6s ease;
-    transition-property: background-color, color;
-    cursor: pointer;
+  width: auto;
+  border: none;
+  outline: none;
+  background-color: #161616;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.6s ease;
+  transition-property: background-color, color;
+  cursor: pointer;
 }
 
 .a-effect {
-    background-color: #f9cb7e;
-    color: #000;
+  background-color: #f9cb7e;
+  color: #000;
 }
 
 .button-effect-inner,
 .button-effect-text {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 
 .button-effect-inner {
-    height: 1.75em;
-    overflow: hidden;
-    position: relative;
+  height: 1.75em;
+  overflow: hidden;
+  position: relative;
 }
 
 .button-effect-text {
-    line-height: 2;
-    transition: transform 0.4s ease-out;
+  line-height: 2;
+  transition: transform 0.4s ease-out;
 }
 
 .button-effect-text::after {
-    content: attr(data-effect);
-    display: block;
+  content: attr(data-effect);
+  display: block;
 }
 
 .button-effect:hover {
-    background-color: #f9cb7e;
-    color: #000;
+  background-color: #f9cb7e;
+  color: #000;
 }
 
 .a-effect:hover {
-    background-color: #161616;
-    color: #fff;
+  background-color: #161616;
+  color: #fff;
 }
 
 .button-effect:hover .button-effect-text {
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-main {
-
-    .spanHeader {
-
-        span {
-            background: #E6EFFF;
-            color: #015DFF;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 20px;
-        }
-
-        h1 {
-            font-size: 55px;
-            width: 70vh;
-        }
-
-        p {
-            margin-top: 3vh;
-            margin-bottom: 7vh;
-            width: 60vh;
-            font-size: 18px;
-        }
-
-    }
-
-    #upBanner {
-        background-image: url('/src/images/upbanner/bg.jpg');
-        width: 100%;
-        height: 110vh;
-        gap: 10vh;
-        padding-top: 15vh;
-        padding-left: 8vh;
-        display: flex;
-        justify-content: space-around;
-
-
-        #upBannerMain {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-direction: column;
-
-            .upBannerHeader {
-                text-align: left;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1vh;
-            }
-
-            #upBannerLinks {
-                display: flex;
-                gap: 1vh;
-            }
-
-            #upBannerStats {}
-
-            img {
-                height: 40vh;
-            }
-        }
-
-        #ourServices {
-            text-align: center;
-
-            .ourServicesHeader {
-                display: flex;
-            }
-
-            #ourServicesCards {
-                display: flex;
-
-                .ourServicesCard {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                }
-            }
-        }
-    }
+/* Other Things */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5vh 7vh;
+  gap: 30vh;
 }
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5vh;
+}
+header nav ul li {
+  font-size: 18px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #161616;
+}
+header nav ul li a:hover {
+  color: #015DFF;
+}
+
+main .spanHeader span {
+  background: #E6EFFF;
+  color: #015DFF;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+main .spanHeader h1 {
+  font-size: 55px;
+  width: 70vh;
+}
+main .spanHeader p {
+  margin-top: 3vh;
+  margin-bottom: 7vh;
+  width: 60vh;
+  font-size: 18px;
+}
+main #upBanner {
+  background-image: url("/src/images/upbanner/bg.jpg");
+  width: 100%;
+  height: 110vh;
+  gap: 10vh;
+  padding-top: 15vh;
+  padding-left: 8vh;
+  display: flex;
+  justify-content: space-around;
+}
+main #upBanner #upBannerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+main #upBanner #upBannerMain .upBannerHeader {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vh;
+}
+main #upBanner #upBannerMain #upBannerLinks {
+  display: flex;
+  gap: 1vh;
+}
+main #upBanner #upBannerMain img {
+  height: 40vh;
+}
+main #upBanner #ourServices {
+  text-align: center;
+}
+main #upBanner #ourServices .ourServicesHeader {
+  display: flex;
+}
+main #upBanner #ourServices #ourServicesCards {
+  display: flex;
+}
+main #upBanner #ourServices #ourServicesCards .ourServicesCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

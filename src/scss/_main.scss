@@ -1,0 +1,83 @@
+main {
+
+    .spanHeader {
+
+        span {
+            background: #E6EFFF;
+            color: #015DFF;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 55px;
+            width: 70vh;
+        }
+
+        p {
+            margin-top: 3vh;
+            margin-bottom: 7vh;
+            width: 60vh;
+            font-size: 18px;
+        }
+
+    }
+
+    #upBanner {
+        background-image: url('/src/images/upbanner/bg.jpg');
+        width: 100%;
+        height: 110vh;
+        gap: 10vh;
+        padding-top: 15vh;
+        padding-left: 8vh;
+        display: flex;
+        justify-content: space-around;
+
+
+        #upBannerMain {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .upBannerHeader {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1vh;
+            }
+
+            #upBannerLinks {
+                display: flex;
+                gap: 1vh;
+            }
+
+            #upBannerStats {}
+
+            img {
+                height: 40vh;
+            }
+        }
+
+        #ourServices {
+            text-align: center;
+
+            .ourServicesHeader {
+                display: flex;
+            }
+
+            #ourServicesCards {
+                display: flex;
+
+                .ourServicesCard {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
