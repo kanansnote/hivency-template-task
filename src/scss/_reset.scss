@@ -7,7 +7,20 @@
     font-family: 'Outfit', sans-serif;
 }
 
-/* Button Effects */
+a {
+    text-decoration: none;
+    color: #161616;
+}
+
+#homePageActive {
+    color: #0066d9;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Button Effect */
 
 .button-effect {
     width: auto;
@@ -64,26 +77,189 @@
     transform: translateY(-50%);
 }
 
+/* Image Transform Effect */
+
+.up-right-animation {
+    animation-name: up-right;
+    animation-duration: 7s;
+    /* Adjust duration for animation speed */
+    animation-iteration-count: infinite;
+    /* Loop animation forever */
+}
+
+@keyframes up-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    /* Start at original position */
+    50% {
+        transform: translateX(10px);
+    }
+
+    /* Move image down */
+    100% {
+        transform: translateX(0);
+    }
+
+    /* Move image back up (loop) */
+}
+
+.i-icon-designs {
+    background-color: #BDEFFB;
+    width: 63px;
+    height: 63px;
+    text-align: center;
+    padding-top: 3.6vh;
+    padding-left: 0.8vh;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 4vh 0;
+
+    &:hover {
+
+        .dropbtn {
+            color: #0066d9;
+        }
+    }
+
+    .dropbtn {
+        display: flex;
+        align-items: center;
+        gap: 1vh;
+        color: #161616;
+
+        i {
+            margin-left: 5px;
+            transition: 0.5s ease-in-out;
+            position: relative;
+            top: 1px;
+        }
+
+    }
+
+    .dropdown-content {
+        display: none;
+        background-color: #f1f1f1;
+        width: 180px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        transition: 0.3s;
+        position: relative;
+        top: 10vh;
+        left: -3vh;
+
+        a {
+            color: black;
+            padding: 12px 16px 12px 20px;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            transition: 0.3s;
+            
+            &:hover {
+                color: #0066d9;
+                padding-left: 25px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 23px;
+                left: 8px;
+                width: 5px;
+                border-bottom: 5px;
+                border: solid 1px #f1f1f1;
+                transition: 0.5s;
+            }
+
+            &:hover::before {
+                left: 4px;
+                border: solid 1px #0066d9;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 23px;
+                left: 8px;
+                width: 5px;
+                border-bottom: 5px;
+                border: solid 1px #f1f1f1;
+                transition: 0.5s;       
+            }
+
+            &:hover::after {
+                left: 10px;
+                border: solid 1px #0066d9;
+            }
+        }
+    
+    }
+    
+    .dropdownLanguages {
+        position: absolute;
+        right: 0;
+        min-width: 115px;
+    }
+    
+    .dropdownCurrencies {
+        position: absolute;
+        right: 0;
+        min-width: 90px;
+    }
+
+    &:hover {
+        .dropdown-content {
+            display: block;
+        }
+
+        .dropbtn {
+
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
 /* Other Things */
 
+section {
+    margin: 5vh 0;
+}
+
 .sectionHeader {
+    margin-top: 10vh;
 
     span {
+        display: inline-block;
         background: #E6EFFF;
         color: #015DFF;
         padding: 6px 12px;
         border-radius: 8px;
         font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 3vh;
     }
 
     h1 {
-        font-size: 55px;
+        font-size: 35px;
+        color: #161616;
     }
 
     p {
         margin-top: 3vh;
         margin-bottom: 7vh;
         font-size: 18px;
+        color: #474747;
     }
 
 }

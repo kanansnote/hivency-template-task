@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hivency</title>
     <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
+
 <body>
     <header>
         <a href="index.html">
-            <img src="./src/images/header/logo.png" alt="Logo">
+            <img src="./src/images/header-footer/logo.png" alt="Logo">
         </a>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <div id="homePageActive" class="dropbtn">Home<i class="fas fa-angle-down"></i></div>
+                    <div class="dropdown-content dropdownLanguages">
+                        <a href="https://hivency.boomdevstheme.com/">Home Page 1</a>
+                        <a href="https://hivency.boomdevstheme.com/home-2/">Home Page 2</a>
+                    </div>
+                </li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Blog</a></li>
+                <li class="dropdown">
+                    <div class="dropbtn">Services<i class="fas fa-angle-down"></i></div>
+                    <div class="dropdown-content dropdownLanguages">
+                        <a href="https://hivency.boomdevstheme.com/all-services/">Services</a>
+                        <a href="https://hivency.boomdevstheme.com/services/user-experience-strategy/">Services Details</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropbtn">Pages<i class="fas fa-angle-down"></i></div>
+                    <div class="dropdown-content dropdownLanguages">
+                        <a href="https://hivency.boomdevstheme.com/all-projects/">Projects</a>
+                        <a href="https://hivency.boomdevstheme.com/?hivency-portfolio=blockchain-development">Projects Details</a>
+                        <a href="https://hivency.boomdevstheme.com/team-member/">Team Member</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <div class="dropbtn">Blog<i class="fas fa-angle-down"></i></div>
+                    <div class="dropdown-content dropdownLanguages">
+                        <a href="https://hivency.boomdevstheme.com/blog/">Blog</a>
+                        <a href="https://hivency.boomdevstheme.com/branding-with-personality-what-makes-you-stand-out/">Blog Details</a>
+                    </div>
+                </li>
                 <li><a href="#">Contact</a></li>
                 <li><button class="button-effect">
                         <span class="button-effect-inner">
@@ -30,8 +59,8 @@
         </nav>
     </header>
     <main>
-        <section id="upBanner">
-            <div id="upBannerMain">
+        <section class="upBanner">
+            <div id="upBannerLeft">
                 <div class="sectionHeader upBannerHeader">
                     <span>Creative agency</span>
                     <h1>Branding for your growth goals and creative ideas</h1>
@@ -43,45 +72,216 @@
                             <span class="button-effect-text" data-effect="Learn More">Learn More</span>
                         </span>
                     </a>
-                    <a href="#">Watch Video</a>
-                </div>
-                <div id="upBannerStats">
-                    <img src="./src/images/upbanner/star.png" alt="Star">
-                    <h6>Profit Earned</h6>
-                    <p>850K</p>
+                    <a href="#" class="button-effect a-effect">
+                        <i class="fa-solid fa-play i-icon-designs"></i>
+                        <span class="button-effect-inner">
+                            <span class="button-effect-text button-effect-text-last" data-effect="Watch Video">Watch Video</span>
+                        </span>
+                    </a>
                 </div>
             </div>
-            <img src="./src/images/upbanner/hero-1.png" alt="Woman Picture">
+            <div id="upBannerRight">
+                <div id="upBannerStats">
+                    <i class="fa-solid fa-euro-sign i-icon-designs"></i>
+                    <div id="upBannerStatsText">
+                        <span>Profits Earned</span>
+                        <h1>850K</h1>
+                    </div>
+                </div>
+                <img src="./src/images/upbanner/star.png" alt="Star">
+                <img id="workActivityImage" src="./src/images/upbanner/work-activity-1.png" alt="Work Activity Image">
+                <img class="up-right-animation upBannerWoman" src="./src/images/upbanner/hero-1.png" alt="Woman Picture">
+            </div>
         </section>
         <section id="ourServices">
             <div class="sectionHeader ourServicesHeader">
                 <span>Our services</span>
-                <h1>Unleashing the best website tailored for you</h1>                
+                <h1>Unleashing the best website tailored for you</h1>
             </div>
             <div id="ourServicesCards">
                 <div class="ourServicesCard">
-                    <img src="" alt="">
+                    <i class="fa-solid fa-box"></i>
                     <h2>User experience</h2>
                     <p>Nemo enim ipsam voluptatem quiamet voluptas asper natur oditut</p>
                 </div>
                 <div class="ourServicesCard">
-                    <img src="" alt="">
+                    <i class="fa-solid fa-bolt"></i>
                     <h2>Digital strategy</h2>
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
                 </div>
                 <div class="ourServicesCard">
-                    <img src="" alt="">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
                     <h2>Web design</h2>
-                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis</p>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corpori
                 </div>
             </div>
         </section>
-        <section>
+        <section id="ApproxSupportForYou">
+            <p>Approx 875+ team members ready to online support for you</p>
+            <div id="ApproxSupportForYou-OutsideLine"></div>
+        </section>
+        <section id="AboutUs">
+            <div class="sectionImages aboutUsImages">
+                <img src="./src/images/about-us/bg-1.png" alt="">
+                <img class="up-right-animation" src="./src/images/about-us/image.png" alt="">
+            </div>
+            <div id="aboutUsMain">
+                <div class="sectionHeader aboutUsHeader">
+                    <span>About Us</span>
+                    <h1>A dedicated under-linesolution for new startups and enterprises</h1>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, laborem consectectur, adipisci
+                        velit, sed quia non numquam eius modi temporadew incisdunt ut labore et dolore magnam aliquam
+                    </p>
+                </div>
+                <div id="aboutUsCards">
+                    <div class="aboutUsCard">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <a href="#">UI/UX design</a>
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</p>
+                    </div>
+                    <div class="aboutUsCard">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <a href="#">Web Development</a>
+                        <p>Nemo enim ipsam voluptatem voluptas asper natur oditut</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Portfolio">
+            <div class="sectionHeader portfolioHeader">
+                <span>Portfolio</span>
+                <h1>Immerse yourself in our latest and most finest work</h1>
+            </div>
+            <div class="portfolioCards swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="portfolioCard swiper-slide">
+                        <img src="./src/images/portfolio/image-1.jpg" alt="">
+                    </div>
+                    <div class="portfolioCard swiper-slide">
+                        <img src="./src/images/portfolio/image-2.jpg" alt="">
+                    </div>
+                    <div class="portfolioCard swiper-slide">
+                        <img src="./src/images/portfolio/image-3.jpg" alt="">
+                    </div>
+                    <div class="portfolioCard swiper-slide">
+                        <img src="./src/images/portfolio/image-4.jpg" alt="">
+                    </div>
+                    <div class="portfolioCard swiper-slide">
+                        <img src="./src/images/portfolio/image-5.jpg" alt="">
+                    </div>
+                    <div class="portfolioCard swiper-slide">
+                        <img src="./src/images/portfolio/image-6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Testimonial">
+            <div class="sectionHeader testimonialHeader">
 
+            </div>
+        </section>
+        <section id="Subscribe">
+            <div class="sectionHeader subscribeHeader">
+                <h1>Ready to get started with your new project today?</h1>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit asper natur aut oditut fugit seduia conse.</p>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Enter Email Address">
+                <button class="button-effect" type="submit">
+                    <span class="button-effect-inner">
+                        <span class="button-effect-text" data-effect="Submit Now">Submit Now</span>
+                    </span>
+                </button>
+            </form>
         </section>
     </main>
     <footer>
-        
+        <div id="footerTop">
+            <div id="footerTopLeft">
+                <img src="./src/images/header-footer/footer-logo.png" alt="Logo">
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, laborem con sectec tur</p>
+                <ul id="socialLinks">
+                    <li><a title="Facebook" href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li><a title="Twitter" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a title="LinkedIn" href="https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                    <li><a title="Instagram" href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="footerTopRight">
+                <div class="footerTopCenterLinks">
+                    <h2 class="footerTopCenterHeading">Pages</h2>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">UX Strategy</a></li>
+                        <li><a href="#">Marketing Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footerTopCenterLinks">
+                    <h2 class="footerTopCenterHeading">Company</h2>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                </div>
+                <div id="recentPosts">
+                    <h2>Recent Posts</h2>
+                    <div class="recentPostsCard">
+                        <img src="./src/images/header-footer/recent-posts/blog-image-1-150x150.jpg" alt="">
+                        <div class="recentPostsText">
+                            <span>Oct 29, 2023</span>
+                            <a
+                                href="https://hivency.boomdevstheme.com/how-did-you-get-started-in-creating-user-interfaces/">
+                                How Did You Get Started In Creating?
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recentPostsCard">
+                        <img src="./src/images/header-footer/recent-posts/blog-image-2-150x150.jpg" alt="">
+                        <div class="recentPostsText">
+                            <span>Oct 29, 2023</span>
+                            <a
+                                href="https://hivency.boomdevstheme.com/what-is-cloud-infrastructure-entitlements-management/">
+                                What Is Cloud Infrastructure Entitlements Management?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="contactInfo">
+                    <h2>Contact Info</h2>
+                    <div id="contactInfoMain">
+                        <span><i class="fa-solid fa-location-dot"></i>Neque porro quisquam est, qui dolorem ipsum quia
+                            dolor sit
+                            amet</span>
+                        <a href="mailto:info.hivency@gmail.com"><i
+                                class="fa-solid fa-envelope"></i>info.hivency@gmail.com</a>
+                        <div id="contactInfoCall">
+                            <i class="fa-solid fa-phone"></i>
+                            <ul>
+                                <li><a href="tel:01961926400">01961926400</a></li>
+                                <li><a href="tel:016932154654">016932154654</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footerBottom">
+            <p>© 2024 Kanan N. All rights reserved. Powered by <a id="hivencyWebsite" href="https://hivency.boomdevstheme.com/">Hivency</a>.</p>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </div>
     </footer>
+    <script src="./src/js/script.js"></script>
 </body>
+
 </html>

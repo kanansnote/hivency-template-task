@@ -1,6 +1,6 @@
 main {
 
-    #upBanner {
+    .upBanner {
         background-image: url('/src/images/upbanner/bg.jpg');
         width: 100%;
         height: 110vh;
@@ -8,10 +8,11 @@ main {
         padding-top: 15vh;
         padding-left: 8vh;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin: 0;
+        position: relative;
 
-
-        #upBannerMain {
+        #upBannerLeft {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
@@ -22,6 +23,7 @@ main {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1vh;
+                margin-top: 0;
 
                 h1 {
                     width: 70vh;
@@ -35,16 +37,83 @@ main {
 
             #upBannerLinks {
                 display: flex;
+                align-items: center;
                 gap: 1vh;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    
+                    &:nth-child(2) {
+                        width: 50vh;
+                        background: none;
+                        position: relative;
+                        margin-left: 1vh;
+
+                        &:hover {
+                            color:#000;
+                        }
+
+                        i {
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+
+                    .button-effect-text-last {
+                        padding-left: 5vh;
+                    }
+
+                }
             }
 
+        }
+
+        #upBannerRight {
+            position: relative;
+
+            i {
+                padding-left: 0;
+            }
+            
             #upBannerStats {
-                position: absolute;
-                right: 0;
+                display: inline-flex;
+                align-items: center;
+                gap: 3vh;
+                background-color: white;
+                padding: 2vh;
+                border-radius: 2vh;
+
+                #upBannerStatsText {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        color: #6b6b76;
+                        font-size: 16px;
+                    }
+
+                    h1 {
+                        color: #161616;
+                    }
+                }
             }
 
-            img {
-                height: 40vh;
+
+            #workActivityImage {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .upBannerWoman {
+                position: absolute;
+                bottom: -1vh;
+                right: 15vh;
+                width: 90vh;
+                height: 90vh;
+                object-fit: contain;
             }
         }
 
@@ -62,13 +131,209 @@ main {
 
         #ourServicesCards {
             display: flex;
+            justify-content: space-around;
 
             .ourServicesCard {
+                margin-top: 5vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                gap: 3vh;
                 flex-direction: column;
+                text-align: center;
+                border-radius: 4vh;
+                width: 65vh;
+                height: 35vh;
+                padding: 2vh;
+                box-shadow: 0px 24px 64px 0px rgba(199, 206, 218, 0.25);
+
+                i {
+                    font-size: 20px;
+                    padding-top: 3.2vh;
+                    border-radius: 5vh;
+                    width: 10vh;
+                    height: 10vh;
+                }
+
+                .fa-box {
+                    background-color: #bdeffb;
+                }
+
+                .fa-bolt {
+                    background-color: #ffcc7e;
+                }
+
+                .fa-wand-magic-sparkles {
+                    background-color: #ffe3ee;
+                }
+
+                p {
+                    width: 50vh;
+                    color: #474747;
+                }
             }
         }
     }
+
+    #ApproxSupportForYou {
+        text-align: center;
+        position: relative;
+
+        p {
+            border: solid 1px #e7e7e7;
+            border-radius: 6vh;
+            width: 100vh;
+            transform: translateX(57vh);
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: white;
+        }
+
+        #ApproxSupportForYou-OutsideLine {
+            border-top: solid 1px #e7e7e7;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 3.5vh;
+            z-index: -1;
+        }
+    }
+
+    #AboutUs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .aboutUsImages {
+            position: relative;
+
+            img {
+
+                &:nth-child(1) {
+                    position: relative;
+                    top: 4vh;
+                    left: 4vh;
+                    width: 90vh;
+                    z-index: -1;
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 19.4vh;
+                    left: 17vh;
+                    border-radius: 20vh;
+                    width: 70vh;
+                    z-index: 1;
+                }
+            }
+
+        }
+
+        #aboutUsMain {
+            display: flex;
+            flex-direction: column;
+            width: 100vh;
+
+            .aboutUsHeader {
+                margin-top: 20vh;
+            }
+
+            #aboutUsCards {
+                display: flex;
+
+                .aboutUsCard {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2vh;
+
+                    i {
+                        width: 12vh;
+                        height: 12vh;
+                        padding: 3.6vh 3.9vh;
+                        font-size: 32px;
+                        border-radius: 8vh;
+                    }
+
+                    .fa-lightbulb {
+                        background-color: #ffcc7e;
+                    }
+
+                    .fa-mug-hot {
+                        background-color: #BDEFFB;
+                    }
+
+                    a {
+                        font-size: 24px;
+                    }
+
+                    p {
+                        margin-bottom: 5vh;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    #Portfolio {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .portfolioCards {
+            display: flex;
+            justify-content: space-around;
+            gap: 5vh;
+
+            .portfolioCard {
+                width: 20vh;
+                height: 20vh;
+            }
+        }        
+    }
+
+    #Subscribe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url('../images/subscribe-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 70vh;
+
+        .subscribeHeader {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            position: relative;
+
+            input {
+                color: #778196;
+                height: 79px;
+                padding: 0 40px;
+                font-size: 18px;
+                font-weight: 400;
+                border-radius: 50px;
+                width: 95vh;
+                border: none;
+            }
+
+            button {
+                position: absolute;
+                right: 2vh;
+                top: 1.4vh;
+                padding: 2vh 4vh;
+            }
+
+            .button-effect:hover {
+                background-color: #161616;
+                color: white;
+            }
+        }
+    }
+
 }
