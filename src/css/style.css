@@ -258,7 +258,7 @@ main .upBanner {
   height: 110vh;
   gap: 10vh;
   padding-top: 15vh;
-  padding-left: 8vh;
+  padding-left: 15vh;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -276,6 +276,7 @@ main .upBanner #upBannerLeft .upBannerHeader {
   align-items: flex-start;
   gap: 1vh;
   margin-top: 0;
+  z-index: 2;
 }
 main .upBanner #upBannerLeft .upBannerHeader h1 {
   width: 70vh;
@@ -309,6 +310,12 @@ main .upBanner #upBannerLeft #upBannerLinks a:nth-child(2) i {
 main .upBanner #upBannerLeft #upBannerLinks a .button-effect-text-last {
   padding-left: 5vh;
 }
+main .upBanner #upBannerLeft #starImage {
+  position: absolute;
+  left: 5vh;
+  top: 15vh;
+  z-index: 1;
+}
 main .upBanner #upBannerRight {
   position: relative;
 }
@@ -322,6 +329,7 @@ main .upBanner #upBannerRight #upBannerStats {
   background-color: white;
   padding: 2vh;
   border-radius: 2vh;
+  transform: translate(-12vh, 12vh);
 }
 main .upBanner #upBannerRight #upBannerStats #upBannerStatsText {
   display: flex;
@@ -336,8 +344,8 @@ main .upBanner #upBannerRight #upBannerStats #upBannerStatsText h1 {
 }
 main .upBanner #upBannerRight #workActivityImage {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 5vh;
+  right: 60vh;
   z-index: 1;
 }
 main .upBanner #upBannerRight .upBannerWoman {
@@ -475,16 +483,44 @@ main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard p {
 main #Portfolio {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  height: 70vh;
+  background-color: #fbf8ee;
 }
 main #Portfolio .portfolioCards {
-  display: flex;
-  justify-content: space-around;
-  gap: 5vh;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
-main #Portfolio .portfolioCards .portfolioCard {
+main #Portfolio .portfolioCards .swiper-wrapper {
+  display: flex;
+  gap: 5vh;
+  justify-content: space-around;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard {
   width: 20vh;
-  height: 20vh;
+  height: 100%;
+  overflow: hidden;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard img {
+  width: 100%;
+  height: auto;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows {
+  background-color: #F2F3F4;
+  color: #7E7E7E;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  border-radius: 6vh;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows:hover {
+  background-color: #8358ff;
+  color: white;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows::after {
+  content: "";
 }
 main #Subscribe {
   display: flex;

@@ -6,7 +6,7 @@ main {
         height: 110vh;
         gap: 10vh;
         padding-top: 15vh;
-        padding-left: 8vh;
+        padding-left: 15vh;
         display: flex;
         justify-content: space-between;
         margin: 0;
@@ -24,6 +24,8 @@ main {
                 align-items: flex-start;
                 gap: 1vh;
                 margin-top: 0;
+                z-index: 2;
+
 
                 h1 {
                     width: 70vh;
@@ -43,7 +45,7 @@ main {
                 a {
                     display: flex;
                     align-items: center;
-                    
+
                     &:nth-child(2) {
                         width: 50vh;
                         background: none;
@@ -51,7 +53,7 @@ main {
                         margin-left: 1vh;
 
                         &:hover {
-                            color:#000;
+                            color: #000;
                         }
 
                         i {
@@ -67,6 +69,13 @@ main {
                 }
             }
 
+            #starImage {
+                position: absolute;
+                left: 5vh;
+                top: 15vh;
+                z-index: 1;
+            }
+
         }
 
         #upBannerRight {
@@ -75,7 +84,7 @@ main {
             i {
                 padding-left: 0;
             }
-            
+
             #upBannerStats {
                 display: inline-flex;
                 align-items: center;
@@ -83,6 +92,7 @@ main {
                 background-color: white;
                 padding: 2vh;
                 border-radius: 2vh;
+                transform: translate(-12vh, 12vh);
 
                 #upBannerStatsText {
                     display: flex;
@@ -99,11 +109,10 @@ main {
                 }
             }
 
-
             #workActivityImage {
                 position: absolute;
-                bottom: 0;
-                left: 0;
+                bottom: 5vh;
+                right: 60vh;
                 z-index: 1;
             }
 
@@ -271,25 +280,58 @@ main {
                     }
                 }
             }
-            
+
         }
     }
 
     #Portfolio {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        height: 70vh;
+        background-color: #fbf8ee;
 
         .portfolioCards {
-            display: flex;
-            justify-content: space-around;
-            gap: 5vh;
+            overflow-x: scroll;
+            scrollbar-width: none;
 
-            .portfolioCard {
-                width: 20vh;
-                height: 20vh;
+            .swiper-wrapper {
+                display: flex;
+                gap: 5vh;
+                justify-content: space-around;
+
+                .portfolioCard {
+                    width: 20vh;
+                    height: 100%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
             }
-        }        
+
+            .BothSwiperArrows {
+                background-color: #F2F3F4;
+                color: #7E7E7E;
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                border-radius: 6vh;
+                border: none;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: #8358ff;
+                    color: white;
+                }
+
+                &::after {
+                    content: "";
+                }
+            }
+        }
     }
 
     #Subscribe {
