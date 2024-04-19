@@ -482,9 +482,14 @@ main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard p {
 }
 main #Portfolio {
   display: flex;
+  gap: 5vh;
   flex-direction: column;
   height: 70vh;
   background-color: #fbf8ee;
+  position: relative;
+}
+main #Portfolio .portfolioHeader {
+  padding-left: 5vh;
 }
 main #Portfolio .portfolioCards {
   overflow-x: scroll;
@@ -492,34 +497,160 @@ main #Portfolio .portfolioCards {
 }
 main #Portfolio .portfolioCards .swiper-wrapper {
   display: flex;
-  gap: 5vh;
   justify-content: space-around;
+  gap: 5vh;
+  padding-left: 5vh;
 }
 main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard {
-  width: 20vh;
   height: 100%;
   overflow: hidden;
+  border-radius: 3vh;
 }
 main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  transition: 0.3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard .portfolioCardHover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 15vh;
+  left: 0;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard .portfolioCardHover i {
+  background-color: white;
+  width: 8vh;
+  height: 8vh;
+  padding-top: 2.7vh;
+  border-radius: 20vh;
+  cursor: pointer;
+  transition: 0.8s;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard .portfolioCardHover i:hover {
+  background-color: #ffcc7e;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard .portfolioCardHover h1 {
+  color: white;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard:hover .portfolioCardHover {
+  display: block;
+}
+main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard:hover img {
+  filter: brightness(70%);
+  transform: scale(1.05);
 }
 main #Portfolio .portfolioCards .BothSwiperArrows {
-  background-color: #F2F3F4;
+  background-color: #fff;
   color: #7E7E7E;
   width: 45px;
   height: 45px;
+  text-align: center;
+  padding-top: 2vh;
+  position: absolute;
+  top: 18vh;
+  border-radius: 6vh;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease-in-out;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows:hover {
+  background-color: #ffcc7e;
+  color: white;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows::after {
+  content: "";
+}
+main #Portfolio .portfolioCards .button-prev {
+  position: absolute;
+  right: 20vh;
+}
+main #Portfolio .portfolioCards .button-next {
+  position: absolute;
+  right: 10vh;
+}
+main #Testimonial {
+  background-image: url("../images/testimonial/testimonial-bg.jpg");
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+main #Testimonial .testimonialHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main #Testimonial .testimonialCards {
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+main #Testimonial .testimonialCards .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5vh;
+}
+main #Testimonial .testimonialCards .swiper-wrapper .testimonialCard {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10vh;
+  gap: 5vh;
+}
+main #Testimonial .testimonialCards .swiper-wrapper .testimonialCard img {
+  width: 5%;
+  height: 5%;
+  transition: 0.3s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #Testimonial .testimonialCards .swiper-wrapper .testimonialCard .testimonialCardP {
+  text-align: center;
+  width: 80%;
+  font-size: 20px;
+}
+main #Testimonial .testimonialCards .swiper-wrapper .testimonialCard .testimonialPerson {
+  display: flex;
+  align-items: center;
+}
+main #Testimonial .testimonialCards .swiper-wrapper .testimonialCard .testimonialPerson img {
+  width: 30%;
+  border-radius: 6vh;
+}
+main #Testimonial .testimonialCards .swiper-wrapper .testimonialCard .testimonialPerson .testimonialPersonText {
+  width: 100% !important;
+  padding-left: 3vh;
+}
+main #Testimonial .testimonialCards .BothSwiperArrows {
+  background-color: #fff;
+  color: #7E7E7E;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  padding-top: 2vh;
   position: absolute;
   border-radius: 6vh;
   border: none;
   cursor: pointer;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
   transition: 0.2s ease-in-out;
 }
-main #Portfolio .portfolioCards .BothSwiperArrows:hover {
-  background-color: #8358ff;
+main #Testimonial .testimonialCards .BothSwiperArrows:hover {
+  background-color: #ffcc7e;
   color: white;
 }
-main #Portfolio .portfolioCards .BothSwiperArrows::after {
+main #Testimonial .testimonialCards .BothSwiperArrows::after {
   content: "";
 }
 main #Subscribe {
