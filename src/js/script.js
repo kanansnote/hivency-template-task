@@ -16,3 +16,15 @@ const testimonialSwiper = new Swiper('.testimonialCards', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+const detailsElements = document.querySelectorAll('.ourFAQDetail');
+
+detailsElements.forEach(details => {
+    details.addEventListener('click', () => {
+        detailsElements.forEach(otherDetails => {
+            if (otherDetails !== details && otherDetails.open) {
+                otherDetails.open = false; // Close other open details
+            }
+        });
+    });
+});
