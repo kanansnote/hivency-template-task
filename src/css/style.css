@@ -357,6 +357,12 @@ main .upBanner #upBannerRight .upBannerWoman {
   -o-object-fit: contain;
      object-fit: contain;
 }
+main #ourServices {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 0;
+}
 main #ourServices .ourServicesHeader {
   text-align: center;
 }
@@ -404,6 +410,8 @@ main #ourServices #ourServicesCards .ourServicesCard p {
 main #ApproxSupportForYou {
   text-align: center;
   position: relative;
+  margin-top: 12vh;
+  margin-bottom: 6vh;
 }
 main #ApproxSupportForYou p {
   border: solid 1px #e7e7e7;
@@ -422,22 +430,25 @@ main #ApproxSupportForYou #ApproxSupportForYou-OutsideLine {
   bottom: 3.5vh;
   z-index: -1;
 }
-main #AboutUs {
+main .AboutUs {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 15vh;
 }
-main #AboutUs .aboutUsImages {
+main .AboutUs .aboutUsImages {
   position: relative;
+  bottom: 12vh;
 }
-main #AboutUs .aboutUsImages img:nth-child(1) {
+main .AboutUs .aboutUsImages img:nth-child(1) {
   position: relative;
   top: 4vh;
   left: 4vh;
   width: 90vh;
+  height: auto;
   z-index: -1;
 }
-main #AboutUs .aboutUsImages img:nth-child(2) {
+main .AboutUs .aboutUsImages img:nth-child(2) {
   position: absolute;
   top: 19.4vh;
   left: 17vh;
@@ -445,48 +456,53 @@ main #AboutUs .aboutUsImages img:nth-child(2) {
   width: 70vh;
   z-index: 1;
 }
-main #AboutUs #aboutUsMain {
+main .AboutUs .aboutUsMain {
   display: flex;
   flex-direction: column;
   width: 100vh;
 }
-main #AboutUs #aboutUsMain .aboutUsHeader {
+main .AboutUs .aboutUsMain .aboutUsHeader {
   margin-top: 20vh;
 }
-main #AboutUs #aboutUsMain #aboutUsCards {
+main .AboutUs .aboutUsMain .aboutUsCards {
   display: flex;
 }
-main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard {
+main .AboutUs .aboutUsMain .aboutUsCards .aboutUsCard {
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   gap: 2vh;
 }
-main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard i {
+main .AboutUs .aboutUsMain .aboutUsCards .aboutUsCard i {
   width: 12vh;
   height: 12vh;
   padding: 3.6vh 3.9vh;
   font-size: 32px;
   border-radius: 8vh;
 }
-main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard .fa-lightbulb {
+main .AboutUs .aboutUsMain .aboutUsCards .aboutUsCard .fa-lightbulb {
   background-color: #ffcc7e;
 }
-main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard .fa-mug-hot {
+main .AboutUs .aboutUsMain .aboutUsCards .aboutUsCard .fa-mug-hot {
   background-color: #BDEFFB;
 }
-main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard a {
+main .AboutUs .aboutUsMain .aboutUsCards .aboutUsCard a {
   font-size: 24px;
+  text-align: unset;
+  width: -moz-max-content;
+  width: max-content;
 }
-main #AboutUs #aboutUsMain #aboutUsCards .aboutUsCard p {
+main .AboutUs .aboutUsMain .aboutUsCards .aboutUsCard p {
   margin-bottom: 5vh;
 }
 main #Portfolio {
   display: flex;
   gap: 5vh;
   flex-direction: column;
-  height: 70vh;
+  height: 80vh;
   background-color: #fbf8ee;
   position: relative;
+  margin-bottom: 12vh;
 }
 main #Portfolio .portfolioHeader {
   padding-left: 5vh;
@@ -495,6 +511,50 @@ main #Portfolio .portfolioCards {
   overflow-x: scroll;
   scrollbar-width: none;
 }
+main #Portfolio .portfolioCards .BothSwiperArrows {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #161616;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  padding-top: 2vh;
+  position: relative;
+  top: 20vh;
+  right: 20vh;
+  border-radius: 6vh;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows:hover {
+  background-color: #ffcc7e;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows:hover i {
+  transform: translateY(-36px);
+}
+main #Portfolio .portfolioCards .BothSwiperArrows::after {
+  content: "";
+}
+main #Portfolio .portfolioCards .BothSwiperArrows i {
+  transition: transform 0.4s ease-in-out;
+}
+main #Portfolio .portfolioCards .BothSwiperArrows i:nth-child(1) {
+  padding-bottom: 20px;
+  padding-top: 3px;
+}
+main #Portfolio .portfolioCards .button-prev {
+  position: absolute;
+}
+main #Portfolio .portfolioCards .button-next {
+  position: absolute;
+  right: 10vh;
+}
+main #Portfolio .portfolioCards .button-next i {
+  padding-left: 2px;
+}
 main #Portfolio .portfolioCards .swiper-wrapper {
   display: flex;
   justify-content: space-around;
@@ -502,7 +562,7 @@ main #Portfolio .portfolioCards .swiper-wrapper {
   padding-left: 5vh;
 }
 main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard {
-  height: 100%;
+  height: 85%;
   overflow: hidden;
   border-radius: 3vh;
 }
@@ -517,7 +577,7 @@ main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard .portfolioCardHov
   display: none;
   position: absolute;
   width: 100%;
-  top: 15vh;
+  top: 14vh;
   left: 0;
   text-align: center;
   transition: 0.3s ease-in-out;
@@ -543,36 +603,6 @@ main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard:hover .portfolioC
 main #Portfolio .portfolioCards .swiper-wrapper .portfolioCard:hover img {
   filter: brightness(70%);
   transform: scale(1.05);
-}
-main #Portfolio .portfolioCards .BothSwiperArrows {
-  background-color: #fff;
-  color: #7E7E7E;
-  width: 45px;
-  height: 45px;
-  text-align: center;
-  padding-top: 2vh;
-  position: absolute;
-  top: 18vh;
-  border-radius: 6vh;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
-  transition: 0.2s ease-in-out;
-}
-main #Portfolio .portfolioCards .BothSwiperArrows:hover {
-  background-color: #ffcc7e;
-  color: white;
-}
-main #Portfolio .portfolioCards .BothSwiperArrows::after {
-  content: "";
-}
-main #Portfolio .portfolioCards .button-prev {
-  position: absolute;
-  right: 20vh;
-}
-main #Portfolio .portfolioCards .button-next {
-  position: absolute;
-  right: 10vh;
 }
 main #Testimonial {
   background-image: url("../images/testimonial/testimonial-bg.jpg");
@@ -645,13 +675,94 @@ main #Testimonial .testimonialCards .BothSwiperArrows {
   cursor: pointer;
   box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
   transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+main #Testimonial .testimonialCards .BothSwiperArrows i {
+  padding-bottom: 1.7vh;
+  transition: 0.6s;
+  color: #161616;
 }
 main #Testimonial .testimonialCards .BothSwiperArrows:hover {
   background-color: #ffcc7e;
-  color: white;
 }
 main #Testimonial .testimonialCards .BothSwiperArrows::after {
   content: "";
+}
+main #Testimonial .testimonialCards .swiper-button-prev i:nth-child(1) {
+  padding-left: 12vh;
+}
+main #Testimonial .testimonialCards .swiper-button-prev i:nth-child(2) {
+  padding-left: 10vh;
+}
+main #Testimonial .testimonialCards .swiper-button-prev:hover i {
+  transform: translateX(-74px);
+}
+main #Testimonial .testimonialCards .swiper-button-next i:nth-child(1) {
+  padding-right: 10vh;
+}
+main #Testimonial .testimonialCards .swiper-button-next i:nth-child(2) {
+  padding-right: 12vh;
+}
+main #Testimonial .testimonialCards .swiper-button-next:hover i {
+  transform: translateX(74px);
+}
+main #Testimonial #testimonialCompanies {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10vh;
+}
+main #Testimonial #testimonialCompanies .testimonialCompany {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 8vh;
+  position: relative;
+}
+main #Testimonial #testimonialCompanies .testimonialCompany img {
+  transition: transform 0.6s;
+}
+main #Testimonial #testimonialCompanies .testimonialCompany:hover img {
+  transform: translateY(-47px); /* Move up on hover (adjust as needed) */
+}
+main .whyChooseUsImages {
+  position: relative;
+}
+main .whyChooseUsImages img:nth-child(1) {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 85vh;
+  height: 81.9vh;
+  border-radius: 6vh;
+}
+main .whyChooseUsImages img:nth-child(2) {
+  position: relative;
+  top: 3vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 80vh;
+  height: 82vh;
+}
+main .whyChooseUsMain {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 18.5vh;
+  width: 90vh;
+}
+main .whyChooseUsMain a {
+  width: 29vh;
+  text-align: center;
+}
+main .whyChooseUsMain .whyChooseUsCards {
+  display: flex;
+  justify-content: space-between;
+}
+main .whyChooseUsMain .whyChooseUsCards .whyChooseUsCard h1 {
+  font-size: 40px;
+}
+main .whyChooseUsMain .whyChooseUsCards .whyChooseUsCard p {
+  font-size: 20px;
+  color: #474747;
 }
 main #Subscribe {
   display: flex;
